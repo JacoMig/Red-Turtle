@@ -7,13 +7,13 @@ module.exports = env => {
   
   return {
     devtool : mode === 'production' ? false : 'inline-source-map',
-    entry: {
+    /* entry: {
       app: './src/index.js',
     },
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
-    },
+    }, */
     module: {
       rules: [
         {
@@ -73,11 +73,11 @@ module.exports = env => {
     performance: {
       hints: false
     },
-    optimization: {
+    /* optimization: {
       splitChunks: {
         minSize: 10000,
         maxSize: 250000,
       }
-    }
+    } */
   }
 }
