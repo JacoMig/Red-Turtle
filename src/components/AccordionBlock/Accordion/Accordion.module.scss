@@ -1,0 +1,55 @@
+@import "../../../styles/shared.scss";
+
+.accordion__item {
+  max-height: 25px;
+  padding: 17px 10px 17px 0;
+  border-bottom: 2px solid $blue;
+  color: #000;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  &:first-child {
+    padding-top: 0;
+  }
+  &.open {
+    max-height: 100vh;
+    i {
+      transform: rotate(0);
+    }
+    h4:after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+.accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h4 {
+    @include font-medium(18px);
+    color: $title;
+    &:after {
+      content: "";
+      @include blue-line;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+      transition-delay: 100ms;
+    }
+  }
+  i {
+    background: url("../../../icons/arrow.svg") no-repeat;
+    transform: rotate(180deg);
+    background-position: center;
+    width: 25px;
+    height: 17px;
+    transition: transform 0.3s ease-in-out;
+    transition-delay: 250ms;
+  }
+}
+
+.accordion__body {
+  @include font-light;
+  color: $title;
+}

@@ -1,0 +1,38 @@
+@mixin font-default($size: 1rem) {
+  font-family: "Open Sans";
+  font-size: $size;
+}
+@mixin font-light($size: 0.875rem) {
+  @include font-default($size);
+  font-weight: 300;
+}
+
+@mixin font-medium($size: 1rem) {
+  @include font-default($size);
+  font-weight: 500;
+}
+
+@mixin font-bold($size: 2rem) {
+  @include font-default($size);
+  font-weight: 700;
+}
+
+@mixin blue-line {
+  display: block;
+  width: 50px;
+  height: 5px;
+  margin-top: 10px;
+  background: $blue;
+}
+
+@mixin tablet {
+  @media screen and (min-width: 600px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}

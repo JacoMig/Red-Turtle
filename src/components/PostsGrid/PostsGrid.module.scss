@@ -1,0 +1,31 @@
+@import "../../styles/shared.scss";
+
+.postsGrid {
+  background-color: #ebebeb;
+  position: relative;
+  &__title {
+    @include font-bold(1.5rem);
+    color: black;
+    &:after {
+      content: "";
+      @include blue-line;
+    }
+  }
+  &__subtitle {
+    @include font-light;
+    color: $body;
+  }
+  &__grid {
+    margin-top: 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__logo {
+    position: absolute;
+    right: 35px;
+    width: 100px;
+    top: 22px;
+  }
+}

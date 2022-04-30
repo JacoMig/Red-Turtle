@@ -1,0 +1,73 @@
+@import "../../styles/shared.scss";
+
+.heroBanner {
+  background: url("../../images/herobanner.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  max-height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10%;
+    @include mobile {
+      padding: $padding;
+    }
+    > * {
+      color: white;
+    }
+  }
+  &__title {
+    @include font-bold(3.5rem);
+    line-height: 3.5rem;
+  }
+  &__body {
+    @include font-light(1rem);
+    max-width: 50%;
+    margin: 2rem 0;
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+  &__button {
+    background: $blue;
+    padding: 10px 20px;
+    text-decoration: none;
+    @include font-light(0.8rem);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s linear;
+    &:hover {
+      background: $light-blue;
+    }
+    &:after {
+      content: "";
+      display: block;
+      background: url("../../icons/up-arrow.svg") no-repeat;
+      background-position: center;
+      background-size: 70%;
+      width: 20px;
+      height: 20px;
+      transform: rotate(90deg);
+    }
+    span {
+      margin-right: 12px;
+    }
+  }
+  &__icon {
+    position: absolute;
+    bottom: 26px;
+    right: 22px;
+    width: 20%;
+    img {
+      mix-blend-mode: overlay;
+    }
+  }
+}
