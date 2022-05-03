@@ -1,0 +1,10 @@
+@import "../../styles/shared.scss";
+
+.TeaserRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include singleColumn {
+    flex-direction: column;
+  }
+}

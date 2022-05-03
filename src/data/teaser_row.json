@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "Supercazzola",
+        "body": "Non si intrometta! No, aspetti, mi porga l'indice; ecco lo alzi così... guardi,",
+        "image": "image1.jpg",
+        "date": "2022-03-30",
+        "link": "#"
+    },
+    {
+        "id": 2,
+        "title": "Kafka",
+        "body": "One morning, when Gregor Samsa woke from troubled dreams,",
+        "image": "image2.jpg",
+        "date": "2022-03-29",
+        "link": "#"
+    },
+    {
+        "id": 3,
+        "title": "Dante",
+        "body": "Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura",
+        "image": "image3.jpg",
+        "date": "2022-02-18",
+        "link": "#"
+    },
+    {
+        "id": 4,
+        "title": "Teresa",
+        "body": "La vispa Teresa avea tra l'erbetta, a volo sorpresa gentil farfalletta.",
+        "image": "image4.jpg",
+        "date": "2022-04-20",
+        "link": "#"
+    },
+    {
+        "id": 5,
+        "title": "Lorem Ipsum",
+        "body": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque ",
+        "image": "image5.jpg",
+        "date": "2022-05-01",
+        "link": "#"
+    },
+    {
+        "id": 6,
+        "title": "Kafka 2",
+        "body": "One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed",
+        "image": "image6.jpg",
+        "date": "2022-03-18",
+        "link": "#"
+    }
+]

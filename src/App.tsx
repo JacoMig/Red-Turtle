@@ -3,8 +3,10 @@ import AccordionBlock from './components/AccordionBlock'
 import HeroBanner from './components/HeroBanner'
 import PostsGrid from './components/PostsGrid'
 import Section from './components/Section'
+import TeaserRow from './components/TeaserRow'
 import accordion_data from "./data/accordion.json"
 import posts_grid_data from "./data/posts_grid.json";
+import teaser_row_data from "./data/teaser_row.json";
 
 const App = () => {
     return (<div className="page">
@@ -22,7 +24,9 @@ const App = () => {
             subtitle='sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non'
             items={posts_grid_data}
         />
-        
+         <Section>
+             <TeaserRow items={teaser_row_data} />
+         </Section>
     </div>)
 }
 

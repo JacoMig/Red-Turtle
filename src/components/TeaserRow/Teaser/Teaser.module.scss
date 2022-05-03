@@ -1,0 +1,73 @@
+@import "../../../styles/shared.scss";
+
+.Teaser {
+  @include font-default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  padding: 20px 40px;
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 5%;
+  }
+  width: 33%;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  @include singleColumn {
+    width: 80%;
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+    margin-bottom: 30px;
+    min-height: 300px;
+  }
+  &__title {
+    color: white;
+    @include font-bold;
+  }
+  &__body {
+    font-size: 1.5rem;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+  }
+  &__date {
+    min-width: 160px;
+    color: white;
+    background: grey;
+    padding: 10px;
+    display: inline-block;
+    clip-path: polygon(0 0, 98% 0%, 85% 100%, 0% 100%);
+  }
+  &__link {
+    @include font-bold;
+    color: white;
+    position: absolute;
+    bottom: 27px;
+    right: 22px;
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    &:after {
+      content: "";
+      display: block;
+      background: url("../../../icons/up-arrow.svg") no-repeat;
+      width: 20px;
+      height: 20px;
+      transform: rotate(90deg);
+      margin-left: 10px;
+    }
+  }
+  &:hover {
+    .Teaser__link,
+    .Teaser__body {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
