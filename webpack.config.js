@@ -11,6 +11,10 @@ module.exports = (env) => {
     resolve: {
       extensions: [".tsx", ".ts", ".js"],
     },
+    devServer: {
+      publicPath: "/",
+      contentBase: [__dirname + "/public/"],
+    },
     module: {
       rules: [
         {
@@ -31,11 +35,7 @@ module.exports = (env) => {
         },
         {
           test: /\.(woff(2)?|ttf|eot|png|jpe?g|gif)(\?v=\d+\.\d+\.\d+)?$/,
-          use: [
-            {
-              loader: "file-loader",
-            },
-          ],
+          loader: "file-loader",
         },
         {
           test: /\.svg/,
@@ -56,7 +56,6 @@ module.exports = (env) => {
     output: {
       filename: "bundle.js",
       path: path.resolve(__dirname, "dist"),
-      publicPath: "/",
     },
     plugins: [
       new HtmlWebPackPlugin({

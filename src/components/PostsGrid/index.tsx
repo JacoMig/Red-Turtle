@@ -28,7 +28,7 @@ const PostsGrid = (props:IPostsGrid) => {
                     <p className='postsGrid__subtitle'>{subtitle}</p>
                     <div className='postsGrid__grid'>
                         {items && items.length > 0 ? 
-                            items.map(item => <Post title={item.title} body={item.body} link={item.link} />)
+                            items.map(item => <Post key={item.id} title={item.title} body={item.body} link={item.link} />)
                         : null}    
                     </div>
                 </div>

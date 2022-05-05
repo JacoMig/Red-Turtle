@@ -1,10 +1,24 @@
 @import "../../styles/shared.scss";
 
-.TeaserRow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @include singleColumn {
-    flex-direction: column;
+.Teasers {
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    @include singleColumn {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+  }
+  &__showAll {
+    background-color: darkgoldenrod;
+    padding: 10px 20px;
+    border: none;
+    @include font-medium(1.3rem);
+    color: white;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
   }
 }

@@ -1,15 +1,12 @@
-import classNames from "classnames";
-import { url } from "inspector";
 import React, { useState } from "react"
 import { TeaserTypes } from "../types"
 import "./Teaser.module.scss";
 
 const Teaser = (props:TeaserTypes) => {
     const {date, title, body, link, image} = props
-    const [isVisible, setIsVisible] = useState<Boolean>(false)
     return (
         <div className="Teaser" 
-           style={{backgroundImage: `url(/public/${image})`}}
+           style={{backgroundImage: `url(/${image})`}}
         >
             <div className="Teaser__content">
                 <div className="Teaser__date">{date}</div>
